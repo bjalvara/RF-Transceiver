@@ -11,22 +11,22 @@ if __name__ == '_main_':
     GPIO.setup(RECEIVE_PIN, GPIO.IN)
     cumulative_time = 0
     beginning_time = datetime.now()
-    print '**Started Recording'
+    print('**Started Recording')
     while cumulative_time < MAX_DURATION:
         time_delta = datetime.now() - beginning_time
         RECEIVED_SIGNAL[0].append(time_delta)
         RECEIVED_SIGNAL[1].append(GPIO.input(RECEIVE_PIN))
         cumulative_time = time_delta.second
     
-    print '**Ended recording**'
-    print len(RECEIVED_SIGNAL[0]), 'sample recorded'
+    print('**Ended recording**')
+    print(len(RECEIVED_SIGNAL[0]), 'sample recorded')
     GPIO.cleanup()
 
-    print '**Processing results**'
+    print('**Processing results**')
     for i in range(len(RECEIVED_SIGNAL[0])):
         RECEIVED_SIGNAL[0][i] = RECEIVED_SIGNAL[0][i].seconds + RECEIVED_SIGNAL[0][i].microseconds/1000000.0
 
-    print '**Plotting results**'
+    print('**Plotting results**')
     pyplot.plot(RECEIVED_SIGNAL[0], RECEIVED_SIGNAL[1])
     pyplot.axis([0, MAX_DURATION, -1, 2])
     pyplot.show()
