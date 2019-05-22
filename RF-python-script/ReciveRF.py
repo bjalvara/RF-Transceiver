@@ -26,6 +26,6 @@ if __name__ == '__main__':
         RECEIVED_SIGNAL[0][i] = RECEIVED_SIGNAL[0][i].seconds + RECEIVED_SIGNAL[0][i].microseconds/1000000.0
 
     print('**Plotting results**')
-    #pyplot.plot(RECEIVED_SIGNAL[0], RECEIVED_SIGNAL[1])
-    #pyplot.axis([0, MAX_DURATION, -1, 2])
-    #pyplot.show()
+    pyplot.plot(RECEIVED_SIGNAL[0], RECEIVED_SIGNAL[1])
+    pyplot.axis([0, MAX_DURATION, -1, 2])
+    pyplot.show()
