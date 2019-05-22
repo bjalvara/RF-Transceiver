@@ -6,7 +6,7 @@ RECEIVED_SIGNAL = [[], []] #[[time of reading], [signal reading]]
 MAX_DURATION = 5
 RECEIVE_PIN = 4
 
-if __name__ = '_main_':
+if __name__ == '_main_':
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(RECEIVE_PIN, GPIO.IN)
     cumulative_time = 0
