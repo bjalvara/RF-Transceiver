@@ -15,7 +15,7 @@ long_delay = 0.00090
 extended_delay = 0.0096
 
 NUM_ATTEMPTS = 10
-TRANSMIT_PIN = 4
+TRANSMIT_PIN = 17
 
 """Opens the GPIO output and loops through every character in the code string
 Then truns the transmitter on an off according to the timing info you enterd to build up a 
