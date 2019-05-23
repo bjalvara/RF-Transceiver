@@ -10,6 +10,17 @@ network={
     phase1="peapver=0"
     phase2="auth=MSCHAPV2"
 }
+# run vnc
+sudo apt-get update
+sudo apt-get install tightvncserver
+sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
+sudo raspi-config
+--interface options, enable vnc
+sudo vncpasswd -service.
+    ece140
+vncserver: 1
+vncserver -kill :1
+
 #basic installations
 sudo apt-get install vim
 sudo apt-get install git
