@@ -28,6 +28,9 @@ sudo apt-get updata
 sudo apt-get install git build-essential python-dev
 git clone https://github.com/bjalvara/RF-Transceiver
 
+# need matplotlib
+sudo apt-get install python-matplotlib
+
 #Set up WiringPi
 git clone git://git.drogon.net/wiringPi
 #Go to wiringPi directory and run
@@ -48,10 +51,7 @@ watch -n 0.5 'gpio readall'
 ./RFSniffer 
 ./codesend ?????/???
 
-##
-##
-##
-## For the Python home automation tutorial
 
-# need matplotlib
-sudo apt-get install python-matplotlib
+## For the Python home automation tutorial
+run: python TransmitRF.py a_on b_on c_off
+
