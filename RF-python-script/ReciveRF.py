@@ -21,10 +21,10 @@ if __name__ == '__main__':
     print(len(RECEIVED_SIGNAL[0]), 'samples recorded')
     GPIO.cleanup()
 
-    #print('**Processing results**')
+    print('**Processing results**')
     for i in range(len(RECEIVED_SIGNAL[0])):
         RECEIVED_SIGNAL[0][i] = RECEIVED_SIGNAL[0][i].seconds + RECEIVED_SIGNAL[0][i].microseconds/1000000.0
-        print(str(RECEIVE_PIN[0][i])
+        print(str(RECEIVED_SIGNAL[0][i]))
 
     #print('**Plotting results**')
     #pyplot.plot(RECEIVED_SIGNAL[0], RECEIVED_SIGNAL[1])
