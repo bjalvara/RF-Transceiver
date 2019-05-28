@@ -1,15 +1,18 @@
 import RPi.GPIO as GPIO
-# Choose gpio
-RECEIVE_PIN = 27
-
-# for GPIO numbering choose BCM
+from time import sleep
 GPIO.setmode(GPIO.BCM)
 
-# set GPIO to input
+RECEIVE_PIN = 27
+
 GPIO.setup(RECEIVE_PIN,GPIO.IN)
 
-i=0
-received_signal = []
-while (loop ==1):
-    received_signal=(GPIO.input(RECEIVE_PIN))
-    print(received_signal
+
+try:
+    while True:
+        if GPIO.input(RECEIVE_PIN):
+            print("pin is high")
+        else:
+            print("pin is low")
+
+except KeyboardInterrupt:
+    GPIO.cleanup()
