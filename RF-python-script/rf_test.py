@@ -378,7 +378,7 @@ if __name__ == "__main__":
    while (1):
 
       msg += 1
-      time.sleep(.2)
+      time.sleep(.5)
 
       #while not tx.ready():
          #time.sleep(0.02)
