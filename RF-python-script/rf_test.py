@@ -43,9 +43,9 @@ def _sym2nibble(symbol):
 
 def _crc_ccitt_update(crc, data):
 
-   data = data ^ (crc & 0xFF);
+   data = data ^ (crc & 0xFF)
 
-   data = (data ^ (data << 4)) & 0xFF;
+   data = (data ^ (data << 4)) & 0xFF
 
    return (
              (((data << 8) & 0xFFFF) | (crc >> 8)) ^

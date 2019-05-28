@@ -9,10 +9,11 @@ GPIO.setup(RECEIVE_PIN,GPIO.IN)
 
 try:
     while True:
+        val = GPIO.input(RECEIVE_PIN)
         if GPIO.input(RECEIVE_PIN):
-            print("pin is high")
+            print(val)
         else:
-            print("pin is low")
+            print(val)
 
 except KeyboardInterrupt:
     GPIO.cleanup()
