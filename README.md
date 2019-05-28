@@ -1,5 +1,11 @@
 # RF-Transceiver
 
+#Text edditing
+wpa_supplicant.conf
+
+config.txt
+ssh
+
 # In case you have to re flash the OS again..
 network={
     ssid="UCSD-PROTECTED"
